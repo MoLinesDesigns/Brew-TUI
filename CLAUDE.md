@@ -139,6 +139,7 @@ Both the TUI and the menubar app support English (en) and Spanish (es).
 
 ## Gotchas
 
+- **Do NOT upgrade to TypeScript 7** (tried and reverted 2026-08-04). `@typescript-eslint/parser` refuses to load under it with an explicit guard — `Error: typescript-eslint does not support TS 7.0` — so `npm run lint` and the husky pre-push gate fail outright. Worse, plain `npm install` stops resolving (`ERESOLVE`), because even the latest `@typescript-eslint/eslint-plugin` (8.65.0) declares `typescript: ">=4.8.4 <6.1.0"`; only `8.65.1-alpha.*` prereleases exist beyond it. The typecheck output is identical on 6.0.3, so there is nothing to gain. Revisit only when [typescript-eslint#10940](https://github.com/typescript-eslint/typescript-eslint/issues/10940) ships stable support (targets TS >= 7.1), and re-verify by running `npx eslint src/` directly — `npm run validate` can pass on a half-resolved tree and hide the failure.
 - `npm run dev` requires an interactive TTY — Ink's raw mode fails in pipes/scripts
 - On Apple Silicon, `@rollup/rollup-darwin-arm64` may need a manual `npm install` if tsup fails
 - `brew search` has no `--json` flag — parsed as text in `text-parser.ts`

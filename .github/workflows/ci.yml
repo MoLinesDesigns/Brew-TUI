@@ -1,9 +1,10 @@
 name: CI
 
+# Sólo manual. La cuenta de GitHub está bloqueada por facturación, así que
+# cada push disparaba un job que moría en segundos sin ejecutar un solo paso
+# y mandaba un correo de fallo. Verificación real: `npm run validate` en local.
+# Para reactivarlo, devuelve los disparadores `push`/`pull_request`.
 on:
-  pull_request:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:

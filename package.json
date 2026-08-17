@@ -54,23 +54,23 @@
     "@inkjs/ui": "2.0.0",
     "ink": "7.1.1",
     "react": "19.2.8",
-    "zustand": "5.0.14"
+    "zustand": "5.0.15"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@rollup/rollup-darwin-arm64": "^4.60.1",
-    "@types/node": "26.1.2",
-    "@types/react": "19.2.17",
-    "@typescript-eslint/eslint-plugin": "8.65.0",
-    "@typescript-eslint/parser": "8.65.0",
+    "@types/node": "26.2.0",
+    "@types/react": "19.2.18",
+    "@typescript-eslint/eslint-plugin": "8.67.0",
+    "@typescript-eslint/parser": "8.67.0",
     "@vitest/coverage-v8": "4.1.10",
-    "eslint": "10.8.0",
+    "eslint": "10.8.1",
     "husky": "9.1.7",
     "ink-testing-library": "4.0.0",
     "prettier": "3.9.6",
     "tsup": "8.5.1",
-    "tsx": "4.23.5",
-    "typescript": "6.0.3",
+    "tsx": "4.23.12",
+    "typescript": "7.0.2",
     "vitest": "4.1.10"
   },
   "overrides": {
